@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purva Raut | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Enable class-based dark mode
+      tailwind.config = { darkMode: 'class' };
+    </script>
+    <!-- Prevent flash: apply saved theme before paint -->
+    <script>
+      (function () {
+        const saved = localStorage.getItem('theme');
+        if (saved === 'dark') document.documentElement.classList.add('dark');
+      })();
+    </script>
+    <style>
+         html { scroll-behavior: smooth; }
+        .glow:hover { box-shadow: 0 0 20px rgba(168,85,247,0.6); }
+        .stat-number { font-size: 2rem; font-weight: bold; }
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+      }
+     /* progress bar css */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.featured {
+  animation: float 3s ease-in-out infinite;
+}
+    </style>
+  </head>
+  
+<!-- <body class="text-white bg-gradient-to-r from-purple-600 via-pink-500 to-indigo-600
+             dark:bg-none dark:bg-gray-950 dark:text-gray-100"> -->
+
+<body class="text-white bg-gradient-to-r from-purple-600 via-pink-500 to-indigo-600
+             dark:bg-gray-950 dark:text-gray-100">
+
+  <!-- Dark Mode Toggle -->
+  <!-- <button onclick="toggleDarkMode()"
+    class="fixed top-4 right-4 px-4 py-2 bg-white text-indigo-700 rounded-lg shadow hover:scale-105 transition z-50">
+    🌙 Toggle Mode
+  </button> -->
+  <button onclick="toggleDarkMode()" id="themeBtn"
+    class="fixed top-4 right-4 px-4 py-2 bg-white text-indigo-700 rounded-full shadow hover:scale-110 transition z-50">
+  🌙
+  </button>
+
+
+<!-- Hero Section -->
+<section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
+  <h1 class="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-yellow-300 via-pink-300 to-blue-300 text-transparent bg-clip-text">
+    Hi, I'm Purva Raut
+  </h1>
+  <!-- <p class="mt-4 text-lg md:text-xl">Full-Stack Developer</p> -->
+  <p class="mt-4 text-lg md:text-xl">
+    <span id="typing"></span>
+  </p>
+  <div class="mt-6 flex gap-4">
+    <a href="./Documents/Resume/Purva-Raut-9137102321 (1).pdf" download
+       class="px-6 py-3 bg-white text-indigo-700 font-bold rounded-lg shadow hover:scale-105 transition">
+      Download Resume
+    </a>
+    <a href="./Documents/Certificates/Java fullstack Purva.pdf"download
+       class="px-6 py-3 bg-white text-indigo-700 font-bold rounded-lg shadow hover:scale-105 transition">
+       Download Java Full Stack Certificate
+    </a>
+    <a href="./Documents/Certificates/Web development in Django.pdf"download
+      class="px-6 py-3 bg-white text-indigo-700 font-bold rounded-lg shadow hover:scale-105 transition">
+      Download Django Certificate
+     </a>
+    <a href="#projects" class="px-6 py-3 bg-white text-indigo-700 font-bold rounded-lg shadow hover:scale-105 transition">
+      View Projects
+    </a>
+  </div>
+  <div class="mt-16 animate-bounce">
+    <a href="#stats" class="text-3xl">⬇</a>
+  </div>
+</section>
+
+<!-- About Me -->
+<section id="about" class="py-20 bg-black/40 text-center px-6">
+  <h2 class="text-3xl font-bold mb-6">About Me</h2>
+
+  <p class="max-w-3xl mx-auto text-gray-200">
+    I am a Computer Engineering graduate passionate about building full-stack applications.
+    I enjoy solving real-world problems using Java, Django, and React. Currently working on a
+    Job Portal with advanced features like filtering, authentication, and quiz system. 
+  </p>
+</section>
+  <!-- Stats Section -->
+  <section id="stats" class="py-20 bg-gray-900">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+      <div>
+        <p class="stat-number" data-target="10">0</p>
+        <p class="mt-2">Projects Completed</p>
+      </div>
+      <div>
+        <p class="stat-number" data-target="3">0</p>
+        <p class="mt-2">Years of Engineering</p>
+      </div>
+      <div>
+        <p class="stat-number" data-target="1000">0</p>
+        <p class="mt-2">Hours of Coding</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section id="timeline" class="py-20 bg-gray-800 fade-in">
+    <h2 class="text-3xl font-bold text-center mb-12">Education & Experience</h2>
+    <div class="max-w-3xl mx-auto relative border-l-2 border-purple-400">
+      <div class="mb-10 ml-6">
+        <div class="absolute w-4 h-4 bg-purple-500 rounded-full -left-2"></div>
+        <h3 class="text-xl font-semibold">2021 - 2024</h3>
+        <p class="text-gray-300">BE Computer Engineering - University of Mumbai</p>
+      </div>
+      <div class="mb-10 ml-6">
+        <div class="absolute w-4 h-4 bg-purple-500 rounded-full -left-2"></div>
+        <h3 class="text-xl font-semibold">2022 - 2023</h3>
+        <p class="text-gray-300">Trainee Developer at Writer Pvt Ltd</p>
+      </div>
+      <div class="mb-10 ml-6">
+        <div class="absolute w-4 h-4 bg-purple-500 rounded-full -left-2"></div>
+        <h3 class="text-xl font-semibold">2024</h3>
+        <p class="text-gray-300">Built Multi-Banking System in Core Java</p>
+      </div>
+      <div class="mb-10 ml-6">
+        <div class="absolute w-4 h-4 bg-purple-500 rounded-full -left-2"></div>
+        <h3 class="text-xl font-semibold">2025</h3>
+        <p class="text-gray-300">React + Supabase Umpire Booking System</p>
+      </div>
+      <div class="ml-6">
+        <div class="absolute w-4 h-4 bg-purple-500 rounded-full -left-2"></div>
+        <h3 class="text-xl font-semibold">2026</h3>
+        <p class="text-gray-300">Full-stack job portal using Django + React with job search, filters,
+          apply/save feature, and quiz system.</p>
+      </div>
+    </div>
+  </section>
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 bg-gray-900 fade-in">
+    <h2 class="text-3xl font-bold text-center mb-12">Skills</h2>
+  
+    
+    <!-- <div class="max-w-5xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-6"> -->  
+      <!-- <div class="bg-white/10 p-4 rounded-xl glow text-center">
+        <h3 class="font-bold">Languages</h3>
+        <p class="text-sm text-gray-300 mt-2">Java, Python, JavaScript</p>
+      </div>
+  
+      <div class="bg-white/10 p-4 rounded-xl glow text-center">
+        <h3 class="font-bold">Frontend</h3>
+        <p class="text-sm text-gray-300 mt-2">HTML, CSS, React</p>
+      </div>
+  
+      <div class="bg-white/10 p-4 rounded-xl glow text-center">
+        <h3 class="font-bold">Backend</h3>
+        <p class="text-sm text-gray-300 mt-2">Django, REST API</p>
+      </div>
+  
+      <div class="bg-white/10 p-4 rounded-xl glow text-center">
+        <h3 class="font-bold">Database</h3>
+        <p class="text-sm text-gray-300 mt-2">MySQL</p>
+      </div> -->
+      
+
+      <!--Here added Progress bars-->
+      <div class="max-w-4xl mx-auto space-y-6">
+
+        <!-- Java -->
+        <div>
+          <p class="mb-1">Java</p>
+          <div class="w-full bg-white/20 rounded">
+            <div class="bg-green-400 h-2 rounded" style="width: 85%"></div>
+          </div>
+        </div>
+      
+        <!-- Python -->
+        <div>
+          <p class="mb-1">Python</p>
+          <div class="w-full bg-white/20 rounded">
+            <div class="bg-green-400 h-2 rounded" style="width: 75%"></div>
+          </div>
+        </div>
+      
+        <!-- React -->
+        <div>
+          <p class="mb-1">React</p>
+          <div class="w-full bg-white/20 rounded">
+            <div class="bg-green-400 h-2 rounded" style="width: 70%"></div>
+          </div>
+        </div>
+      
+       <!-- Django -->
+        <div>
+          <p class="mb-1">Django</p>
+          <div class="w-full bg-white/20 rounded">
+            <div class="bg-green-400 h-2 rounded" style="width: 65%"></div>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 bg-gray-900 fade-in">
+    <h2 class="text-3xl font-bold text-center mb-12">Projects</h2>
+    <div class="max-w-5xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white/10 rounded-xl p-6 glow border border-yellow-400">
+    
+        <h3 class="font-bold text-xl">Multi-Banking System</h3>
+        <p class="mt-2 text-gray-300">Developed a Core Java banking system with account, deposit, and transaction features.</p>
+        <div class="mt-4 flex gap-3">
+          <a href="https://github.com/purvaraut21/Multi-banking-system-java" target="_blank" class="px-4 py-2 bg-white text-indigo-700 rounded-lg">Code</a>
+            <a href="#" 
+              class="px-4 py-2 bg-green-400 text-black rounded-lg">
+                Live
+            </a>
+        </div>
+ 
+      </div>
+
+      <div class="bg-white/10 rounded-xl p-6 glow border border-yellow-400">
+       
+        <h3 class="font-bold text-xl">Meme App Generator</h3>
+        <p class="mt-2 text-gray-300">React.js app to generate memes with custom text.</p>
+        <div class="mt-4 flex gap-3">
+          <a href="https://github.com/purvaraut21/MemeApp" target="_blank" class="px-4 py-2 bg-white text-indigo-700 rounded-lg">Code</a>
+          <a href="#" 
+          class="px-4 py-2 bg-green-400 text-black rounded-lg">
+            Live
+        </a>
+        </div>
+  
+      </div>
+
+      <div class="bg-white/10 rounded-xl p-6 glow border border-yellow-400">
+        
+        <h3 class="font-bold text-xl">Music Podcast Player</h3>
+        <p class="mt-2 text-gray-300">Web app for streaming and managing podcast playlists.</p>
+        <div class="mt-4 flex gap-3">
+          <a href="https://github.com/purvaraut21/Music-Podcast-Player" target="_blank" class="px-4 py-2 bg-white text-indigo-700 rounded-lg">Code</a>
+          <a href="#" 
+          class="px-4 py-2 bg-green-400 text-black rounded-lg">
+            Live
+        </a>
+        </div>
+
+     </div>
+
+        <div class="bg-white/10 rounded-xl p-6 glow border border-yellow-400">
+          <div class="flex justify-between items-center">
+            <h3 class="font-bold text-xl">Job Portal</h3>
+            <span class="text-xs bg-yellow-400 text-black px-2 py-1 rounded">
+              Featured
+            </span>
+          </div>
+        
+          <p class="text-yellow-300 text-sm mt-1">
+            Backend completed; React frontend in progress
+          </p>
+        
+          <p class="mt-2 text-gray-300">
+            Full-stack job portal using Django + React with job search,
+            filters, apply/save feature, and quiz system.
+          </p>
+        
+          <div class="mt-4 flex gap-3">
+            <span class="px-3 py-1 bg-white/20 rounded text-sm">Django</span>
+            <span class="px-3 py-1 bg-white/20 rounded text-sm">React</span>
+            <span class="px-3 py-1 bg-white/20 rounded text-sm">MySQL</span>
+          </div>
+
+          <div class="mt-4 flex gap-3"> 
+          <span class="px-4 py-2 bg-yellow-400 text-black rounded-lg">
+            Live Soon
+          </span>
+        </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-gray-800">
+    <h2 class="text-3xl font-bold text-center mb-12">Contact Me</h2>
+    <div class="max-w-3xl mx-auto bg-white/10 p-8 rounded-xl backdrop-blur-md">
+      <form action="https://formspree.io/f/mayvlvav" method="POST" class="grid gap-6">
+        <input type="text" name="name" placeholder="Your Name" class="p-3 rounded bg-white/20 text-white placeholder-gray-300">
+        <input type="email" name="email" placeholder="Your Email" class="p-3 rounded bg-white/20 text-white placeholder-gray-300">
+        <textarea name="message" rows="4" placeholder="Your Message" class="p-3 rounded bg-white/20 text-white placeholder-gray-300"></textarea>
+        <button type="submit" class="px-6 py-3 bg-white text-indigo-700 font-bold rounded-lg shadow hover:scale-105 transition">Send Message</button>
+      </form>
+      <div class="mt-6 flex justify-center gap-4">
+        <a href="mailto:purvar2186@gmail.com" class="hover:underline">Email</a>
+        <a href="https://www.linkedin.com/in/purva-raut-28660315a" target="_blank" class="hover:underline">LinkedIn</a>
+        <a href="https://github.com/purvaraut21" target="_blank" class="hover:underline">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 text-center bg-gray-900 text-gray-400">
+    © 2025 Purva Raut. All rights reserved.
+  </footer>
+
+  <!-- JS: Stats Animation + Dark Mode -->
+  <script>
+
+    // Stats animation
+    const counters = document.querySelectorAll('.stat-number');
+    const speed = 100;
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          counters.forEach(counter => {
+            const update = () => {
+              const target = +counter.getAttribute('data-target');
+              const count = +counter.innerText;
+              const inc = target / speed;
+              if (count < target) {
+                counter.innerText = Math.ceil(count + inc);
+                setTimeout(update, 40);
+              } else { counter.innerText = target; }
+            };
+            update();
+          });
+        }
+      });
+    }, { threshold: 0.5 });
+    counters.forEach(c => observer.observe(c));
+
+  // Typing Animation
+
+    const roles = ["Full-Stack Developer", "Java Developer", "Frontend Developer"];
+let i = 0, j = 0;
+let current = "";
+let isDeleting = false;
+
+function type() {
+  current = roles[i];
+
+  if (isDeleting) {
+    document.getElementById("typing").textContent = current.substring(0, j--);
+  } else {
+    document.getElementById("typing").textContent = current.substring(0, j++);
+  }
+
+  if (!isDeleting && j === current.length) {
+    isDeleting = true;
+    setTimeout(type, 1000);
+    return;
+  }
+  if (isDeleting && j === 0) {
+    isDeleting = false;
+    i = (i + 1) % roles.length;
+  }
+
+  setTimeout(type, isDeleting ? 50 : 100);
+}
+
+type();
+
+
+
+
+    // Dark Mode toggle + remember choice
+    function setTheme(mode) {
+      if (mode === 'dark') {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      }
+    }
+   
+    function toggleDarkMode() {
+      const isDark = document.documentElement.classList.contains('dark');
+      setTheme(isDark ? 'light' : 'dark');
+    }
+    
+    
+    // update session
+    const faders = document.querySelectorAll('.fade-in');
+
+const appearOptions = {
+  threshold: 0.2
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+
+    entry.target.classList.add('show');
+    observer.unobserve(entry.target);
+  });
+}, appearOptions);
+
+faders.forEach(fader => {
+  appearOnScroll.observe(fader);
+});
+  </script>
+</body>
+</html>
